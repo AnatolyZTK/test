@@ -45,7 +45,7 @@ RUN mkdir -p \
 # Установка прав
 RUN chown -R www-data:www-data /var/www && \
     chmod -R 775 storage bootstrap/cache &&\
-    chmod -R 777 storage/logs
+    chmod -R 775 storage
 
 
 # Порт PHP-FPM
