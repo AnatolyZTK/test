@@ -44,7 +44,9 @@ RUN mkdir -p \
 
 # Установка прав
 RUN chown -R www-data:www-data /var/www && \
-    chmod -R 775 storage bootstrap/cache &&\
+    chown -R www-data:www-data /var/www && \
+    chown -R www-data:www-data storage && \
+    chmod -R 775 bootstrap/cache &&\
     chmod -R 775 storage
 
 
